@@ -1,21 +1,23 @@
-node {
+pipeline{
 
-try {
-stage("Checkout") {
-// checkout scm
-}
+    agent any
 
-stage("Build & test") {
-// build & Unit test
-}
-} catch (e) {
-// fail the build if an exception is thrown
-currentBuild.result = "FAILED"
-throw e
-} finally {
-// Post build steps here
-/* Success or failure, always run post build steps */
-// send email
-// publish test results etc etc
-}
+    stages {
+
+        stage ('Compile Stage') {
+
+            steps {
+
+            echo ('Comple')
+
+            }
+
+        stage('Build') {
+                steps {
+                    sh 'xcrun xcodebuild -project QRReader.xcodeproj -scheme "QRReader" -destination \'platform=iOS Simulator,name=iPhone 6\''
+                }
+            }
+
+        }
+    }
 }
