@@ -46,6 +46,7 @@
 		1D3C98EE2186F621002FD44D = {
 			isa = PBXGroup;
 			children = (
+				1DF4688A218CA36B0052F37D /* Jenkinsfile */,
 				1D3C98F92186F621002FD44D /* QRReader */,
 				1D3C98F82186F621002FD44D /* Products */,
 			);
@@ -71,7 +72,6 @@
 				1D3C99062186F622002FD44D /* LaunchScreen.storyboard */,
 				1D3C99092186F622002FD44D /* Info.plist */,
 				1D3C99012186F621002FD44D /* QRReader.xcdatamodeld */,
-				1DF4688A218CA36B0052F37D /* Jenkinsfile */,
 			);
 			path = QRReader;
 			sourceTree = "<group>";
