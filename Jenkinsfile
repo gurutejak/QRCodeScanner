@@ -1,18 +1,10 @@
-pipeline{
-
-agent any
-
+pipeline {
+agent { docker { image 'python:3.5.1' } }
 stages {
-
-stage ('Compile Stage') {
-
+stage('build') {
 steps {
-
-echo ('Comple')
-
-}
-
+sh 'python --version'
 }
 }
 }
-
+}
