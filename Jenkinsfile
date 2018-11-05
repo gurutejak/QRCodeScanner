@@ -21,8 +21,8 @@ node{
     }
 
     stage('Archieve') {
-        xcodebuild -scheme QRReader clean archive -archivePath build/QRReader
-        xcodebuild -exportArchive -exportFormat ipa -archivePath "build/QRReader.xcarchive" -exportPath "build/QRReader.ipa" -exportProvisioningProfile "cognizantenterprisemobility"
+        sh xcodebuild -scheme QRReader clean archive -archivePath build/QRReader
+        sh xcodebuild -exportArchive -exportFormat ipa -archivePath "build/QRReader.xcarchive" -exportPath "build/QRReader.ipa" -exportProvisioningProfile "cognizantenterprisemobility"
     }
 }
 
