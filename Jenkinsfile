@@ -1,4 +1,4 @@
-node('iOS Node')  {
+node{
     stage('Checkout/Build/Test') {
         checkout([
             $class: 'GitSCM',
