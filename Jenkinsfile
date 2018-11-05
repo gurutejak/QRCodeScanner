@@ -1,22 +1,17 @@
-node {
+node('iOS Node')  {
+    stage('Checkout/Build/Test') {
+        checkout([
+            $class: 'GitSCM',
+            branches: [[name: 'master']],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [], submoduleCfg: [],
+            userRemoteConfigs: [[
+            name: 'github',
+            url: 'https://github.com/gurutejak/QRCodeScanner.git'
+        ]]
+        ])
 
-    try {
-        stage("Checkout") {
-            // checkout scm
-        }
+    sh 'xcodebuild -scheme "QRCodeScanner" -configuration "release" build -destination "platform=iOS Simulator,name=iPhone 6,OS=10.1"'
 
-        stage("Build & test") {
-            // build & Unit test
-        }
-    }
-catch (e) {
-    // fail the build if an exception is thrown
-    currentBuild.result = "FAILED"
-    throw e
-    } finally {
-    // Post build steps here
-    /* Success or failure, always run post build steps */
-    // send email
-    // publish test results etc etc
     }
 }
