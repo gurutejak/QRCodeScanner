@@ -11,7 +11,9 @@ node{
         ]]
         ])
 
-    sh 'xcodebuild -scheme "QRCodeScanner" -configuration "release" build -destination "platform=iOS Simulator,name=iPhone 6,OS=10.1"'
+    sh 'xcodebuild -scheme "QRReader" -configuration "release" build -destination "platform=iOS Simulator,name=iPhone 6,OS=10.1"'
 
     }
 }
+
+
