@@ -1,5 +1,5 @@
 node{
-    stage('Checkout/Build/Test') {
+    stage('Checkout') {
         checkout([
             $class: 'GitSCM',
             branches: [[name: 'master']],
@@ -10,10 +10,9 @@ node{
             url: 'https://github.com/gurutejak/QRCodeScanner.git'
         ]]
         ])
+    }
 
-    sh 'xcodebuild -scheme "QRReader" -configuration "release" build -destination "platform=iOS Simulator,name=iPhone 6,OS=10.1"'
-
+    stage('Build') {
+        sh 'xcodebuild -scheme "QRReader" -configuration "release" build -sdk iphoneos'
     }
 }
-
-
