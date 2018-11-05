@@ -1,17 +1,27 @@
-pipeline{
 
-agent any
+def xcarchive_name = "Jenkins iOS Example.xcarchive" // Name of the archive to build
+def build_scheme = 'QRReader' // Scheme to build the app
 
-stages {
+node{
+    stage('Checkout') {
+        checkout([
+            $class: 'GitSCM',
+            branches: [[name: 'master']],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [], submoduleCfg: [],
+            userRemoteConfigs: [[
+            name: 'github',
+            url: 'https://github.com/gurutejak/QRCodeScanner.git'
+        ]]
+    ])
+    }
 
-stage ('Compile Stage') {
+    stage('Build') {
+        sh "xcrun xcodebuild -scheme '${build_scheme}' -destination 'name=iPhone 7' clean build"
+    }
 
-steps {
-
-echo ('Comple')
-
+    stage('Test') {
+        sh "xcrun xcodebuild -scheme '${build_scheme}' -destination 'name=iPhone 7' test"
+    }
 }
 
-}
-}
-}
