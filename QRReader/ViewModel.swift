@@ -40,4 +40,7 @@ class ViewModel {
         }
     }
     
+    func getLabelText() -> String {
+        return "Hello World"
+    }
 }
