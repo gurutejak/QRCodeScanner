@@ -21,7 +21,7 @@ node{
     }
 
     stage('Test') {
-        sh "xcodebuild test -scheme QRReaderTests -configuration Debug -destination platform=’iOS Simulator’"
+        sh "xcodebuild test -scheme QRReaderTests -configuration Debug -destination 'name=iPhone 7'"
     }
 }
 
