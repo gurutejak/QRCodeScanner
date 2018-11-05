@@ -1,3 +1,7 @@
+
+def xcarchive_name = "Jenkins iOS Example.xcarchive" // Name of the archive to build
+def build_scheme = 'QRReader' // Scheme to build the app
+
 node{
     stage('Checkout') {
         checkout([
@@ -13,6 +17,6 @@ node{
     }
 
     stage('Build') {
-        sh 'xcodebuild -scheme "QRReader" -configuration "release" build -sdk iphoneos'
+        sh "xcrun xcodebuild -scheme '${build_scheme}' -destination 'name=iPhone 7' clean build"
     }
 }
