@@ -21,7 +21,7 @@ node{
     }
 
     stage('Test') {
-        sh "xcrun xcodebuild -scheme '${build_scheme}' -destination 'name=iPhone 7' test"
+        sh "xcodebuild test -scheme QRReaderTests -configuration Debug -sdk iphonesimulator7.0 -destination platform=’iOS Simulator’"
     }
 }
 
