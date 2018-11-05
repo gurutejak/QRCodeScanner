@@ -22,7 +22,7 @@ node{
 
     stage('Test') {
         sh "xcrun xcodebuild -project '${xcodeProject}'  -list"
-        sh "xcrun xcodebuild -project QRReaderTests -scheme '${build_scheme}' -destination 'name=iPhone 7' test"
+        sh "xcrun xcodebuild -project '${xcodeProject}' -configuration "Debug" -scheme '${build_scheme}' -destination 'name=iPhone 7' test"
     }
 }
 
