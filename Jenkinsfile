@@ -11,15 +11,18 @@ node{
             extensions: [], submoduleCfg: [],
             userRemoteConfigs: [[
             name: 'github',
-            url: 'https://github.com/gurutejak/QRCodeScanner.git'
+            url: 'https://github.com/gurutejak/JenkinStarter.git'
         ]]
     ])
     }
 
     stage('Build') {
-        sh "xcrun xcodebuild  -project '${xcodeProject}' -scheme '${build_scheme}' -destination 'name=iPhone 7' clean build"
+        sh "xcrun xcodebuild  -project JenkinStarter -scheme JenkinStarter -destination 'name=iPhone 7' clean build"
     }
 
+    stage('Test') {
+        sh "xcrun xcodebuild -scheme JenkinStarter -destination 'name=iPhone 7' test"
+    }
 }
 
 
