@@ -28,7 +28,7 @@ node{
         sh "security unlock-keychain -p admin"
         sh "xcodebuild -exportArchive -archivePath export/QRReader.xcarchive \
         -exportPath exportedIPA/ \
-        -exportOptionsPlist exportedIPA/ExportOptions.plist"
+        -exportOptionsPlist export/ExportOptions.plist"
     }
 
     stage ('PostBuild - UploadToHockey'){
