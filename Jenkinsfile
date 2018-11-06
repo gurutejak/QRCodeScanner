@@ -26,6 +26,6 @@ node{
 
     stage('stg ipa') {
         sh "security unlock-keychain -p admin"
-        sh "xcodebuild -exportArchive -archivePath QRReader.xcarchive -exportPath QRReader.ipa provisioningProfileUUID: '54763f3e-f511-4a5c-8c5d-297fb34c2bd8' CODE_SIGNING_IDENTITY="iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd" PRODUCT_BUNDLE_IDENTIFIER= "com.cognizantmobilityenterprise.QRReader""
+        sh "xcodebuild -exportArchive -archivePath QRReader.xcarchive -exportPath QRReader.ipa provisioningProfileUUID: '54763f3e-f511-4a5c-8c5d-297fb34c2bd8' CODE_SIGNING_IDENTITY="iPhone Distribution: Cognizant Technology Solutions India Pvt Ltd" PRODUCT_BUNDLE_IDENTIFIER= "com.cognizantmobilityenterprise.QRReader" "
     }
 }

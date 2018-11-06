@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D377C7F21903F72000F998E /* QRReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D377C7E21903F72000F998E /* QRReaderTests.swift */; };
+		1D377CB02191E397000F998E /* 54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 1D377CAF2191E397000F998E /* 54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision */; };
 		1D3C98FB2186F621002FD44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C98FA2186F621002FD44D /* AppDelegate.swift */; };
 		1D3C98FD2186F621002FD44D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3C98FC2186F621002FD44D /* ViewController.swift */; };
 		1D3C99002186F621002FD44D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D3C98FE2186F621002FD44D /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		1D377C7C21903F72000F998E /* QRReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D377C7E21903F72000F998E /* QRReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderTests.swift; sourceTree = "<group>"; };
 		1D377C8021903F72000F998E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D377CAF2191E397000F998E /* 54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision"; sourceTree = "<group>"; };
 		1D3C98F72186F621002FD44D /* QRReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D3C98FA2186F621002FD44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D3C98FC2186F621002FD44D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		1D3C98EE2186F621002FD44D = {
 			isa = PBXGroup;
 			children = (
+				1D377CAF2191E397000F998E /* 54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision */,
 				1DF4688C218CA7970052F37D /* Jenkinsfile */,
 				1D3C98F92186F621002FD44D /* QRReader */,
 				1D377C7D21903F72000F998E /* QRReaderTests */,
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D377CB02191E397000F998E /* 54763f3e-f511-4a5c-8c5d-297fb34c2bd8.mobileprovision in Resources */,
 				1D3C99082186F622002FD44D /* LaunchScreen.storyboard in Resources */,
 				1DF4688D218CA7970052F37D /* Jenkinsfile in Resources */,
 				1D3C99052186F622002FD44D /* Assets.xcassets in Resources */,
