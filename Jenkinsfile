@@ -26,9 +26,6 @@ node{
 
     stage('stg ipa') {
         sh "security unlock-keychain -p admin"
-        sh "xcodebuild -exportArchive \
-            -archivePath QRReader.xcarchive \
-            -exportPath QRReader \
-            -exportFormat ipa"
+        sh "xcodebuild -exportArchive -archivePath QRReader.xcarchive -exportPath QRReader.ipa -exportOptionsPlist exportOptions.plist"
     }
 }
