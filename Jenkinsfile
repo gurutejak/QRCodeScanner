@@ -25,11 +25,7 @@ node{
     }
 
     stage('stg ipa') {
-    sh "xcodebuild 'exportArchive', [
-        archivePath: 'QRReader.xcarchive',
-        exportFormat: 'IPA',
-        exportPath: 'hockey.ipa',
-        exportWithOriginalSigningIdentity: 'true'
-    ]"
+        sh "security unlock-keychain -p admin"
+        sh "xcodebuild -exportArchive -archivePath export/QRReader.xcarchive -exportPath export/ -exportOptionsPlist export/export_options.plist"
     }
 }
