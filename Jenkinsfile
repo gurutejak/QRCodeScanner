@@ -17,7 +17,7 @@ node{
     }
 
     stage('Build') {
-        sh "xcrun xcodebuild  -project JenkinStarter -scheme JenkinStarter -destination 'name=iPhone 7' clean build"
+        sh "xcrun xcodebuild  -project JenkinStarter.xcodeproj -scheme JenkinStarter -destination 'name=iPhone 7' clean build"
     }
 
     stage('Test') {
