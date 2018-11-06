@@ -17,6 +17,7 @@ node{
     }
 
     stage('Build') {
+        echo '${workspace}'
         sh "xcrun xcodebuild  -project '${xcodeProject}' -scheme '${build_scheme}' -destination 'name=iPhone 7' clean build"
     }
 
