@@ -25,11 +25,11 @@ node{
     }
 
     stage('stg ipa') {
-    xcodebuild 'exportArchive', [
+    sh "xcodebuild 'exportArchive', [
         archivePath: 'QRReader.xcarchive',
         exportFormat: 'IPA',
         exportPath: 'hockey.ipa',
         exportWithOriginalSigningIdentity: 'true'
-    ]
+    ]"
     }
 }
