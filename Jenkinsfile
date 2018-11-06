@@ -20,10 +20,6 @@ node{
         sh "xcrun xcodebuild  -project '${xcodeProject}' -scheme '${build_scheme}' -destination 'name=iPhone 7' clean build"
     }
 
-    stage('Archieve') {
-        sh xcodebuild -scheme QRReader clean archive -archivePath build/QRReader
-        sh xcodebuild -exportArchive -exportFormat ipa -archivePath "build/QRReader.xcarchive" -exportPath "build/QRReader.ipa" -exportProvisioningProfile "cognizantenterprisemobility"
-    }
 }
 
 
