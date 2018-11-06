@@ -32,11 +32,7 @@ node{
     }
 
     stage ('PostBuild - UploadToHockey'){
-    steps {
-    script{
-    hockeyApp applications: [[apiToken: '743d568b06a24060bb548614c1bcf4ad', downloadAllowed: true, filePath: '**/QRReader-*.ipa', mandatory: false, notifyTeam: true, releaseNotesMethod: none(), uploadMethod: appCreation(false)]], debugMode: false, failGracefully: false
-            }
-        }
+        hockeyApp applications: [[apiToken: '743d568b06a24060bb548614c1bcf4ad', downloadAllowed: true, filePath: '**/QRReader-*.ipa', mandatory: false, notifyTeam: true, releaseNotesMethod: none(), uploadMethod: appCreation(false)]], debugMode: false, failGracefully: false
     }
 
 }
